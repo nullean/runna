@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "minver-cli": {
+      "version": "8.0.0",
+      "commands": [
+        "minver"
+      ],
+      "rollForward": false
+    },
+    "assembly-differ": {
+      "version": "0.18.2",
+      "commands": [
+        "assembly-differ"
+      ],
+      "rollForward": false
+    },
+    "curb-cli": {
+      "version": "0.14.2",
+      "commands": [
+        "curb"
+      ],
+      "rollForward": false
+    },
+    "nupkg-validator": {
+      "version": "0.11.6",
+      "commands": [
+        "nupkg-validator"
+      ],
+      "rollForward": false
+    }
+  }
+}

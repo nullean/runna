@@ -1,0 +1,29 @@
+<Solution>
+  <Folder Name="/build/">
+    <File Path=".editorconfig" />
+    <File Path="AGENTS.md" />
+    <File Path=".github/workflows/ci.yml" />
+    <File Path=".github/workflows/gh-pages.yml" />
+    <File Path=".gitignore" />
+    <File Path="mise.toml" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="dotnet-tools.json" />
+    <File Path="global.json" />
+    <File Path="README.md" />
+    <Project Path="build/scripts/scripts.fsproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Nullean.Runna/Nullean.Runna.csproj" />
+    <Project Path="src/Nullean.Runna.Generator/Nullean.Runna.Generator.csproj" />
+    <Project Path="src/Nullean.Runna.Fs/Nullean.Runna.Fs.fsproj" />
+  </Folder>
+  <Folder Name="/examples/">
+    <Project Path="examples/RunnaBuild/RunnaBuild.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <File Path="tests/Directory.Build.props" />
+    <Project Path="tests/Nullean.Runna.Tests/Nullean.Runna.Tests.csproj" />
+    <Project Path="tests/Nullean.Runna.Fs.Tests/Nullean.Runna.Fs.Tests.fsproj" />
+  </Folder>
+</Solution>

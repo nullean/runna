@@ -1,0 +1,16 @@
+project: runna
+max_toc_depth: 2
+
+branding:
+  icon: images/nullean-mark.svg
+
+toc:
+  - file: index.md
+  - file: running.md
+  - file: graph.md
+  - file: parallel.md
+  - file: modifiers.md
+  - file: wrappers.md
+  - file: mise.md
+  - file: makefile.md
+  - file: just.md

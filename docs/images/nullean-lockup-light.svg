@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 96" width="272" height="96" role="img" aria-label="nullean">
+  <defs>
+    <linearGradient id="frameHL" x1="0" y1="0.2" x2="1" y2="0.8">
+      <stop offset="0.44" stop-color="#0FD3DA"></stop>
+      <stop offset="0.56" stop-color="#FF6B6B"></stop>
+    </linearGradient>
+    <radialGradient id="glassHL" cx="0.18" cy="0.12" r="1.2">
+      <stop offset="0" stop-color="#1B2126"></stop>
+      <stop offset="0.55" stop-color="#0D1013"></stop>
+      <stop offset="1" stop-color="#08090B"></stop>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="272" height="96" rx="10" fill="url(#frameHL)"></rect>
+  <rect x="6" y="6" width="260" height="84" rx="5" fill="url(#glassHL)"></rect>
+  <polyline points="28,35.5 42,48 28,60.5" fill="none" stroke="#35FFFF" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"></polyline>
+  <rect x="49" y="54.5" width="20" height="5.4" rx="0.8" fill="#FF7F7F"></rect>
+  <text x="88" y="61" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="38" font-weight="700" letter-spacing="-1" fill="#FFFFFF">nullean</text>
+</svg>
