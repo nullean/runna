@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/png/nullean-lockup-544x192.png" width="420" alt="runna">
+  <img src="docs/images/png/runna-lockup-544x278.png" width="420" alt="runna">
 </p>
 
 <p align="center">Typed build targets for .NET: your targets are the cases of a C# <code>union</code> or an F# DU, dependencies run first, and every target gets real <code>--help</code>.</p>

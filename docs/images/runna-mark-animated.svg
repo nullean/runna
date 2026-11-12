@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192" role="img" aria-label="runna">
+  <style>
+    @keyframes rn-step { 0%, 100% { opacity: 0.28; } 12%, 40% { opacity: 1; } 60% { opacity: 0.28; } }
+    .rn-c { animation: rn-step 1.8s ease-in-out infinite; }
+    .rn-c2 { animation-delay: 0.3s; } .rn-c3 { animation-delay: 0.6s; }
+    @media (prefers-reduced-motion: reduce) { .rn-c { animation: none; } }
+  </style>
+  <defs>
+    <linearGradient id="rnm-f" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0.46" stop-color="#FFD23D"/><stop offset="0.54" stop-color="#3DF58A"/>
+    </linearGradient>
+    <radialGradient id="rnm-g" cx="0.26" cy="0.14" r="1.1">
+      <stop offset="0" stop-color="#1B2126"/><stop offset="0.55" stop-color="#0D1013"/><stop offset="1" stop-color="#08090B"/>
+    </radialGradient>
+  </defs>
+  <rect width="192" height="192" rx="12" fill="url(#rnm-f)"/>
+  <rect x="9" y="9" width="174" height="174" rx="5" fill="url(#rnm-g)"/>
+  <rect x="10" y="10" width="172" height="172" rx="4.5" fill="none" stroke="#08090B" stroke-width="2"/>
+  <rect x="12.5" y="12.5" width="167" height="167" rx="3.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="none" stroke-width="15" stroke-linecap="round" stroke-linejoin="round">
+    <polyline class="rn-c" points="46,62 74,96 46,130" stroke="#FFD23D"/>
+    <polyline class="rn-c rn-c2" points="82,62 110,96 82,130" stroke="#9EE463"/>
+    <polyline class="rn-c rn-c3" points="118,62 146,96 118,130" stroke="#3DF58A"/>
+  </g>
+</svg>

@@ -2,7 +2,7 @@
  * docs/runna-docs.css: the runna theme for docs-builder's design system (NAVIGATION_PREVIEW).
  * Appended to the emitted _static/ds.css by scripts/docs-finish.sh, so it comes after the default theme and wins by
  * cascade order within the same layer, without !important. The palette is the landing page's (docs/runna-landing.html):
- * near-black, lime and blue in dark, a cool paper counterpart with a deep lime in light. Roles are named in
+ * near-black, green and yellow in dark (the runna mark), a cool paper counterpart with a deep green in light. Roles are named in
  * docs-builder's Assets/ds/themes/bold-minimal.css; each pair is `var(--ds-l, light) var(--ds-d, dark)`.
  */
 
@@ -60,39 +60,39 @@
 		--color-text: var(--ds-l, #1b2126) var(--ds-d, #e9ecf1);
 		--color-text-muted: var(--ds-l, #525b67) var(--ds-d, #98a1ae);
 
-		/* The landing page's hairlines are lime at 10%; these are those, made opaque. */
+		/* The landing page's hairlines are green at 10%; these are those, made opaque. */
 		--color-border: var(--ds-l, #d9dfd1) var(--ds-d, #1b2414);
 		--color-border-strong: var(--ds-l, #08090b) var(--ds-d, #e9ecf1);
 		--color-border-control: var(--ds-l, #747d6c) var(--ds-d, #6a7584);
 
-		/* Lime: as on the landing page in dark; a deep lime in light, so links hold 4.5:1 on paper. */
-		--color-accent: var(--ds-l, #3b6a00) var(--ds-d, #b8ff3d);
-		--color-accent-hover: var(--ds-l, #2a4d00) var(--ds-d, #ccff72);
+		/* Green: as on the landing page in dark; a deep green in light, so links hold 4.5:1 on paper. */
+		--color-accent: var(--ds-l, #00703a) var(--ds-d, #3df58a);
+		--color-accent-hover: var(--ds-l, #2a4d00) var(--ds-d, #7dffb0);
 		--color-on-accent: var(--ds-l, #ffffff) var(--ds-d, #08090b);
-		--color-accent-surface: var(--ds-l, #eaf6d4) var(--ds-d, #121a08);
+		--color-accent-surface: var(--ds-l, #e2f6ea) var(--ds-d, #121a08);
 		--color-accent-border: var(--ds-l, #a9d266) var(--ds-d, #33500d);
 
-		/* Buttons: the landing page's primary button, ink on lime in dark; in light, lime on ink, like the brand mark. */
-		--color-action: var(--ds-l, #0d1013) var(--ds-d, #b8ff3d);
-		--color-action-hover: var(--ds-l, #1b2126) var(--ds-d, #ccff72);
+		/* Buttons: the landing page's primary button, ink on green in dark; in light, green on ink, like the brand mark. */
+		--color-action: var(--ds-l, #0d1013) var(--ds-d, #3df58a);
+		--color-action-hover: var(--ds-l, #1b2126) var(--ds-d, #7dffb0);
 		--color-action-hover-deep: var(--ds-l, #08090b) var(--ds-d, #9ad62a);
 		--color-action-deep: var(--ds-l, #08090b) var(--ds-d, #93cc29);
-		--color-action-edge: var(--ds-l, #000000) var(--ds-d, #6f9c1c);
-		--color-action-border: var(--ds-l, #0d1013) var(--ds-d, #b8ff3d);
-		--color-on-action: var(--ds-l, #b8ff3d) var(--ds-d, #08090b);
+		--color-action-edge: var(--ds-l, #000000) var(--ds-d, #1e9e5a);
+		--color-action-border: var(--ds-l, #0d1013) var(--ds-d, #3df58a);
+		--color-on-action: var(--ds-l, #3df58a) var(--ds-d, #08090b);
 
-		--color-brand-deep: var(--ds-l, #08090b) var(--ds-d, #b8ff3d);
-		--color-brand-bright: #b8ff3d;
-		--color-highlight: var(--ds-l, #2f62c9) var(--ds-d, #6ba3ff);
-		--color-highlight-surface: var(--ds-l, #e6efff) var(--ds-d, rgb(74 140 255 / 14%));
+		--color-brand-deep: var(--ds-l, #08090b) var(--ds-d, #3df58a);
+		--color-brand-bright: #3df58a;
+		--color-highlight: var(--ds-l, #2f62c9) var(--ds-d, #ffd23d);
+		--color-highlight-surface: var(--ds-l, #fff3cf) var(--ds-d, rgb(255 210 61 / 14%));
 		--color-emphasis: var(--ds-l, #0d1013) var(--ds-d, #1b2126);
-		--color-on-emphasis: #b8ff3d;
+		--color-on-emphasis: #3df58a;
 
-		--gradient-wash: var(--ds-l, linear-gradient(180deg, #f4f6f1 0%, #edf1e8 100%))
+		--gradient-wash: var(--ds-l, linear-gradient(180deg, #f4f6f1 0%, #eaf2ed 100%))
 			var(--ds-d, linear-gradient(180deg, #0d1013 0%, #08090b 100%));
-		--gradient-hero: var(--ds-l, linear-gradient(160deg, #f4f6f1 0%, #e9f3dc 55%, #e3ecfb 100%))
+		--gradient-hero: var(--ds-l, linear-gradient(160deg, #f4f6f1 0%, #e3f4e9 55%, #fbf0cc 100%))
 			var(--ds-d, linear-gradient(160deg, #0d1013 0%, #0d1a0a 50%, #0b1730 100%));
-		--color-hatch: var(--ds-l, rgb(59 106 0 / 6%)) var(--ds-d, rgb(184 255 61 / 4%));
+		--color-hatch: var(--ds-l, rgb(59 106 0 / 6%)) var(--ds-d, rgb(61 245 138 / 4%));
 
 		/* Code is a dark panel in both modes, like the landing page's terminal and code panels, with its colours. */
 		--color-code-bg: var(--ds-l, #0d1013) var(--ds-d, #0d1013);
@@ -100,25 +100,25 @@
 		--color-code-text: #e9ecf1;
 		--color-code-danger: #ff8a7a;
 		--color-code-warning: #e8b96a;
-		--color-code-info: #6ba3ff;
+		--color-code-info: #ffd23d;
 		--color-code-muted: #98a1ae;
 		--color-code-gutter: #7a8492;
 		--color-code-keyword: #c792ea;
 		--color-code-string: #c3e88d;
 		--color-code-number: #e8b96a;
-		--color-code-attr: #b8ff3d;
-		--color-code-type: #6ba3ff;
-		--color-code-variable: #ccff72;
+		--color-code-attr: #3df58a;
+		--color-code-type: #ffd23d;
+		--color-code-variable: #7dffb0;
 		--color-code-literal: #e8b96a;
 		--color-code-punctuation: #98a1ae;
 
-		--color-focus-ring: var(--ds-l, #3b6a00) var(--ds-d, #b8ff3d);
+		--color-focus-ring: var(--ds-l, #00703a) var(--ds-d, #3df58a);
 
-		/* The landing page's second colour, blue, for "important"; status colours otherwise stay the default's. */
-		--color-important: var(--ds-l, #2457c5) var(--ds-d, #6ba3ff);
-		--color-important-surface: var(--ds-l, #eef4ff) var(--ds-d, rgb(74 140 255 / 10%));
-		--color-success: var(--ds-l, #3b6a00) var(--ds-d, #b8ff3d);
-		--color-success-surface: var(--ds-l, #f1f8e6) var(--ds-d, rgb(184 255 61 / 7%));
+		/* The landing page's second colour, yellow, for "important"; status colours otherwise stay the default's. */
+		--color-important: var(--ds-l, #2457c5) var(--ds-d, #ffd23d);
+		--color-important-surface: var(--ds-l, #fff8e0) var(--ds-d, rgb(255 210 61 / 10%));
+		--color-success: var(--ds-l, #00703a) var(--ds-d, #3df58a);
+		--color-success-surface: var(--ds-l, #eefaf2) var(--ds-d, rgb(61 245 138 / 7%));
 		--color-warning: var(--ds-l, #8a5a00) var(--ds-d, #e8b96a);
 		--color-warning-surface: var(--ds-l, #fdf5e4) var(--ds-d, rgb(232 185 106 / 9%));
 
@@ -129,16 +129,16 @@
 		--shadow-slab-rest: 0 1px 0 var(--color-border);
 		--shadow-overlay: 0 24px 60px rgb(0 0 0 / var(--ds-l, 18%) var(--ds-d, 60%));
 
-		/* The teal call to action becomes the landing page's lime button. */
-		--cta-top: #ccff72;
-		--cta-bottom: #b8ff3d;
-		--cta-edge: #6f9c1c;
-		--cta-border: #b8ff3d;
+		/* The teal call to action becomes the landing page's green button. */
+		--cta-top: #7dffb0;
+		--cta-bottom: #3df58a;
+		--cta-edge: #1e9e5a;
+		--cta-border: #3df58a;
 		--cta-fg: #08090b;
-		--cta-glow: rgb(184 255 61 / 30%);
+		--cta-glow: rgb(61 245 138 / 30%);
 		--cta-hover-top: #d9ff96;
 		--cta-hover-bottom: #c4ff5a;
-		--cta-active-top: #b8ff3d;
+		--cta-active-top: #3df58a;
 		--cta-active-bottom: #a6ec2c;
 
 		--swatch-light: #f4f6f1;
@@ -157,17 +157,17 @@
 }
 
 @layer ds.pages {
-	/* The landing page's mesh: lime and blue glows on near-black, fixed behind the page. Toned down here (about half
+	/* The landing page's mesh: green and yellow glows on near-black, fixed behind the page. Toned down here (about half
 	   the landing page's strength) so prose keeps its contrast; in light the same glows, as a pale wash on paper.
 	   Black drops it, as black means black. */
 	body.navigation-preview {
 		background-color: var(--color-page);
 		background-image:
-			radial-gradient(at 8% 18%, rgb(184 255 61 / var(--ds-l, 16%) var(--ds-d, 10%)) 0, transparent 55%),
-			radial-gradient(at 92% 6%, rgb(74 140 255 / var(--ds-l, 14%) var(--ds-d, 15%)) 0, transparent 50%),
-			radial-gradient(at 60% 78%, rgb(74 140 255 / var(--ds-l, 10%) var(--ds-d, 11%)) 0, transparent 55%),
-			radial-gradient(at 22% 88%, rgb(184 255 61 / var(--ds-l, 10%) var(--ds-d, 5%)) 0, transparent 50%),
-			radial-gradient(at 80% 48%, rgb(107 163 255 / var(--ds-l, 8%) var(--ds-d, 8%)) 0, transparent 50%);
+			radial-gradient(at 8% 18%, rgb(61 245 138 / var(--ds-l, 16%) var(--ds-d, 10%)) 0, transparent 55%),
+			radial-gradient(at 92% 6%, rgb(255 210 61 / var(--ds-l, 14%) var(--ds-d, 15%)) 0, transparent 50%),
+			radial-gradient(at 60% 78%, rgb(255 210 61 / var(--ds-l, 10%) var(--ds-d, 11%)) 0, transparent 55%),
+			radial-gradient(at 22% 88%, rgb(61 245 138 / var(--ds-l, 10%) var(--ds-d, 5%)) 0, transparent 50%),
+			radial-gradient(at 80% 48%, rgb(255 210 61 / var(--ds-l, 8%) var(--ds-d, 8%)) 0, transparent 50%);
 		background-attachment: fixed;
 	}
 
@@ -176,13 +176,13 @@
 		background-image: none;
 	}
 
-	/* Light: the mesh spread over paper tints the whole reading column, and where lime meets blue it turns muddy.
+	/* Light: the mesh spread over paper tints the whole reading column, and where green meets yellow it turns muddy.
 	   Instead the two brand glows sit apart at the top of the page, behind the header and title, and scroll away, so
 	   prose reads on clean paper. */
 	body.navigation-preview {
 		--glow-light:
-			radial-gradient(55% 520px at 0% 0%, rgb(184 255 61 / 26%), transparent 72%),
-			radial-gradient(50% 460px at 100% 0%, rgb(74 140 255 / 16%), transparent 72%);
+			radial-gradient(55% 520px at 0% 0%, rgb(61 245 138 / 26%), transparent 72%),
+			radial-gradient(50% 460px at 100% 0%, rgb(255 210 61 / 16%), transparent 72%);
 	}
 
 	:root[data-theme='light'] body.navigation-preview {
@@ -204,10 +204,10 @@
 		backdrop-filter: blur(12px);
 	}
 
-	/* The landing page's animated lockup (scripts/docs-pages.py), at its size there. It reads "--runna_", so the text
+	/* The landing page's animated lockup (scripts/docs-pages.py), at its size there. It reads "runna", so the text
 	   title stays for screen readers only. */
 	.site-header__logo {
-		width: 87px;
+		width: 94px;
 		height: 48px;
 		flex: none;
 	}
@@ -244,9 +244,9 @@
 		--text-sm: 0.8125rem;
 	}
 
-	/* Code callouts in lime, the landing page's prompt colour, rather than the keyword purple. */
+	/* Code callouts in green, the landing page's prompt colour, rather than the keyword purple. */
 	.code-callout {
-		background: #b8ff3d;
+		background: #3df58a;
 	}
 
 	.prose :is(h1, h2, h3, h4) {
@@ -265,7 +265,7 @@
 		font-weight: 700;
 	}
 
-	/* Sidebar: the current page in lime, as the landing page marks what matters. */
+	/* Sidebar: the current page in green, as the landing page marks what matters. */
 	.nav-tree__link[aria-current='page'] {
 		color: var(--color-accent);
 	}

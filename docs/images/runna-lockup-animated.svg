@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188 96" width="188" height="96" role="img" aria-label="runna">
+  <style>
+    @keyframes rn-step { 0%, 100% { opacity: 0.28; } 12%, 40% { opacity: 1; } 60% { opacity: 0.28; } }
+    @keyframes rn-sheen { 0% { transform: skewX(-18deg) translateX(0); } 100% { transform: skewX(-18deg) translateX(340px); } }
+    .rn-c { animation: rn-step 1.8s ease-in-out infinite; }
+    .rn-c2 { animation-delay: 0.3s; } .rn-c3 { animation-delay: 0.6s; }
+    .rn-sheen { animation: rn-sheen 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite; animation-delay: 0.4s; }
+    @media (prefers-reduced-motion: reduce) { .rn-c, .rn-sheen { animation: none; } .rn-sheen { display: none; } }
+  </style>
+  <defs>
+    <linearGradient id="rnl-f" x1="0" y1="0.2" x2="1" y2="0.8"><stop offset="0.44" stop-color="#FFD23D"/><stop offset="0.56" stop-color="#3DF58A"/></linearGradient>
+    <radialGradient id="rnl-g" cx="0.18" cy="0.12" r="1.2"><stop offset="0" stop-color="#1B2126"/><stop offset="0.55" stop-color="#0D1013"/><stop offset="1" stop-color="#08090B"/></radialGradient>
+    <linearGradient id="rnl-sh" x1="0" y1="0" x2="1" y2="0"><stop offset="0.35" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.8"/><stop offset="0.65" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+    <mask id="rnl-ring"><rect width="188" height="96" rx="10" fill="#FFFFFF"/><rect x="6" y="6" width="176" height="84" rx="5" fill="#000000"/></mask>
+  </defs>
+  <rect width="188" height="96" rx="10" fill="url(#rnl-f)"/>
+  <g mask="url(#rnl-ring)"><rect class="rn-sheen" x="-140" y="-20" width="140" height="136" fill="url(#rnl-sh)" transform="skewX(-18)"/></g>
+  <rect x="6" y="6" width="176" height="84" rx="5" fill="url(#rnl-g)"/>
+  <g fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <polyline class="rn-c" points="22,32 34,48 22,64" stroke="#FFD23D"/>
+    <polyline class="rn-c rn-c2" points="38,32 50,48 38,64" stroke="#9EE463"/>
+    <polyline class="rn-c rn-c3" points="54,32 66,48 54,64" stroke="#3DF58A"/>
+  </g>
+  <text x="80" y="48" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" dominant-baseline="central" fill="#FFFFFF">runna</text>
+</svg>

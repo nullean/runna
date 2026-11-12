@@ -1,6 +1,6 @@
 # Nullean.Runna
 
-![runna](https://raw.githubusercontent.com/nullean/runna/main/docs/images/png/nullean-lockup-544x192.png)
+![runna](https://raw.githubusercontent.com/nullean/runna/main/docs/images/png/runna-lockup-544x278.png)
 
 Typed build targets for .NET, with [Argh](https://github.com/nullean/argh)-quality help. Your targets are the cases of a C# `union`; each one runs commands, and dependencies run first.
 
