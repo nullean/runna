@@ -2,7 +2,7 @@ project: runna
 max_toc_depth: 2
 
 branding:
-  icon: images/nullean-mark.svg
+  icon: images/runna-mark.svg
 
 toc:
   - file: index.md

@@ -1,6 +1,6 @@
 # Nullean.Runna.Fs
 
-![runna](https://raw.githubusercontent.com/nullean/runna/main/docs/images/png/nullean-lockup-544x192.png)
+![runna](https://raw.githubusercontent.com/nullean/runna/main/docs/images/png/runna-lockup-544x278.png)
 
 Typed, namespaced, exhaustive F# build targets. Your targets are DU cases, and a case you forget to handle in `Bind` is a compiler warning (FS0025). Target blocks are [Proc.Fs](https://www.nuget.org/packages/Proc.Fs) `shell { }` blocks, so commands are `sh $"…"` lines.
 

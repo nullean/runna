@@ -7,10 +7,10 @@
 <meta name="description" content="Build full-featured .NET CLIs without writing a parser. Methods become commands, XML docs become help text. Source-generated, AOT-safe, no reflection."/>
 <base href="/"/>
 
-<link rel="icon" type="image/svg+xml" href="images/nullean-mark.svg"/>
-<link rel="icon" type="image/png" sizes="32x32" href="images/png/nullean-mark-32.png"/>
-<link rel="icon" type="image/png" sizes="16x16" href="images/png/nullean-mark-16.png"/>
-<link rel="apple-touch-icon" sizes="180x180" href="images/png/nullean-mark-180.png"/>
+<link rel="icon" type="image/svg+xml" href="images/runna-mark.svg"/>
+<link rel="icon" type="image/png" sizes="32x32" href="images/png/runna-mark-32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="images/png/runna-mark-16.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="images/png/runna-mark-180.png"/>
 <meta name="theme-color" content="#08090B"/>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -23,17 +23,17 @@
     --bg:        #08090B;
     --bg2:       #0D1013;
     --bg3:       #1B2126;
-    --lime:      #B8FF3D;
-    --lime-hi:   #CCFF72;
-    --lime-dim:  #263A0A;
-    --blue:      #4A8CFF;
-    --blue-hi:   #6BA3FF;
-    --blue-dim:  #0D1F3D;
+    --lime:      #3df58a;
+    --lime-hi:   #7dffb0;
+    --lime-dim:  #0a3a20;
+    --blue:      #ffd23d;
+    --blue-hi:   #ffd23d;
+    --blue-dim:  #3d300a;
     --text:      #E9ECF1;
     --muted:     #98A1AE;
     --dim:       #5A6472;
-    --line:      rgba(184,255,61,0.10);
-    --line-soft: rgba(184,255,61,0.055);
+    --line:      rgba(61,245,138,0.10);
+    --line-soft: rgba(61,245,138,0.055);
     --mono:      'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
     --display:   'Space Grotesk', system-ui, sans-serif;
     --maxw:      1240px;
@@ -57,12 +57,12 @@
     position: fixed; inset: 0; z-index: 0; pointer-events: none;
     background-color: var(--bg);
     background-image:
-      radial-gradient(at 8% 18%,  rgba(184,255,61,0.20)  0px, transparent 55%),
-      radial-gradient(at 92% 6%,  rgba(74,140,255,0.28)  0px, transparent 50%),
-      radial-gradient(at 60% 78%, rgba(74,140,255,0.22)  0px, transparent 55%),
-      radial-gradient(at 22% 88%, rgba(184,255,61,0.08)  0px, transparent 50%),
-      radial-gradient(at 80% 48%, rgba(107,163,255,0.16) 0px, transparent 50%),
-      radial-gradient(at 45% 42%, rgba(184,255,61,0.05)  0px, transparent 45%);
+      radial-gradient(at 8% 18%,  rgba(61,245,138,0.20)  0px, transparent 55%),
+      radial-gradient(at 92% 6%,  rgba(255,210,61,0.28)  0px, transparent 50%),
+      radial-gradient(at 60% 78%, rgba(255,210,61,0.22)  0px, transparent 55%),
+      radial-gradient(at 22% 88%, rgba(61,245,138,0.08)  0px, transparent 50%),
+      radial-gradient(at 80% 48%, rgba(255,210,61,0.16) 0px, transparent 50%),
+      radial-gradient(at 45% 42%, rgba(61,245,138,0.05)  0px, transparent 45%);
   }
 
   nav, section, footer { position: relative; z-index: 1; }
@@ -135,14 +135,14 @@
   }
 
   /* nav animated lockup */
-  .nav-lockup { display: block; width: 87px; height: 48px; }
+  .nav-lockup { display: block; width: 94px; height: 48px; }
 
 
   .badge {
     display: inline-flex; align-items: center; gap: 8px;
     font-size: 0.65rem; letter-spacing: 0.10em; text-transform: uppercase;
     color: var(--lime); border: 1px solid var(--lime-dim);
-    background: rgba(184,255,61,0.04);
+    background: rgba(61,245,138,0.04);
     padding: 0.28rem 0.75rem; border-radius: 2px; white-space: nowrap;
   }
   .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--lime); animation: pulse 2.4s ease-in-out infinite; }
@@ -180,7 +180,7 @@
   .terminal {
     background: var(--bg2); border: 1px solid var(--line);
     border-radius: 8px; overflow: hidden;
-    box-shadow: 0 24px 60px -20px rgba(0,0,0,0.7), 0 0 0 1px rgba(184,255,61,0.05);
+    box-shadow: 0 24px 60px -20px rgba(0,0,0,0.7), 0 0 0 1px rgba(61,245,138,0.05);
   }
   .terminal-bar {
     display: flex; align-items: center; gap: 7px;
@@ -284,7 +284,7 @@
   .cta::before {
     content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
     width: 680px; height: 420px; pointer-events: none;
-    background: radial-gradient(ellipse, rgba(184,255,61,0.09) 0%, transparent 68%);
+    background: radial-gradient(ellipse, rgba(61,245,138,0.09) 0%, transparent 68%);
   }
   .cta h2 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 3.6vw, 3rem); letter-spacing: -0.03em; margin-bottom: 1rem; }
   .cta p { color: var(--muted); margin-bottom: 2rem; }
@@ -320,7 +320,7 @@
     color: var(--lime); text-decoration: none; white-space: nowrap;
     transition: border-color .18s, background .18s;
   }
-  .pkg-nuget:hover { border-color: rgba(184,255,61,0.28); background: var(--bg3); }
+  .pkg-nuget:hover { border-color: rgba(61,245,138,0.28); background: var(--bg3); }
   .pkg-cmd {
     display: flex; align-items: center; justify-content: space-between; gap: 1rem;
     background: var(--bg2); border: 1px solid var(--line);
@@ -329,7 +329,7 @@
     cursor: pointer; text-align: left;
     transition: border-color .18s, background .18s;
   }
-  .pkg-cmd:hover { border-color: rgba(184,255,61,0.28); background: var(--bg3); }
+  .pkg-cmd:hover { border-color: rgba(61,245,138,0.28); background: var(--bg3); }
   .pkg-cmd.copied { border-color: var(--lime); }
   .pkg-cmd-dim { color: var(--dim); }
   .pkg-cmd-icon { color: var(--dim); font-size: 1rem; flex-shrink: 0; transition: color .18s; }
@@ -360,6 +360,12 @@
     .reveal { opacity: 1; transform: none; }
     .ar-sheen { display: none; }
   }
+  .lang-tabs { display: flex; gap: 0.5rem; margin-bottom: 0.75rem; }
+  .lang-tab { font: inherit; font-size: 0.8rem; padding: 0.35rem 0.9rem; border-radius: 6px; cursor: pointer;
+    background: transparent; color: var(--dim); border: 1px solid rgba(255,255,255,0.12); }
+  .lang-tab[aria-selected="true"] { color: var(--lime); border-color: var(--lime); }
+  .lang-note { margin-top: 0.75rem; }
+  .lang-note code { white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -369,23 +375,31 @@
 <nav>
   <div class="inner">
     <a class="nav-logo" href="./" aria-label="runna home">
-      <!-- animated lockup inlined so ar-* CSS animations apply; a placeholder until runna has its own artwork -->
-      <svg class="nav-lockup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 174 96" role="img" aria-label="--runna">
+      <!-- docs/images/runna-lockup-animated.svg, inlined so its CSS animations apply -->
+      <svg class="nav-lockup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188 96" role="img" aria-label="runna">
+        <style>
+          @keyframes rn-step { 0%, 100% { opacity: 0.28; } 12%, 40% { opacity: 1; } 60% { opacity: 0.28; } }
+          @keyframes rn-sheen { 0% { transform: skewX(-18deg) translateX(0); } 100% { transform: skewX(-18deg) translateX(340px); } }
+          .rn-c { animation: rn-step 1.8s ease-in-out infinite; }
+          .rn-c2 { animation-delay: 0.3s; } .rn-c3 { animation-delay: 0.6s; }
+          .rn-sheen { animation: rn-sheen 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite; animation-delay: 0.4s; }
+          @media (prefers-reduced-motion: reduce) { .rn-c, .rn-sheen { animation: none; } .rn-sheen { display: none; } }
+        </style>
         <defs>
-          <linearGradient id="fN" x1="0" y1="0.2" x2="1" y2="0.8"><stop offset="0.44" stop-color="#B8FF3D"/><stop offset="0.56" stop-color="#4A8CFF"/></linearGradient>
-          <radialGradient id="gN" cx="0.18" cy="0.12" r="1.2"><stop offset="0" stop-color="#1B2126"/><stop offset="0.55" stop-color="#0D1013"/><stop offset="1" stop-color="#08090B"/></radialGradient>
-          <linearGradient id="shN" x1="0" y1="0" x2="1" y2="0"><stop offset="0.35" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.8"/><stop offset="0.65" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
-          <mask id="ringN"><rect width="174" height="96" rx="10" fill="#FFFFFF"/><rect x="6" y="6" width="162" height="84" rx="5" fill="#000000"/></mask>
-          <clipPath id="typeN"><rect x="52" y="24" width="90" height="48"/></clipPath>
+          <linearGradient id="rnn-f" x1="0" y1="0.2" x2="1" y2="0.8"><stop offset="0.44" stop-color="#FFD23D"/><stop offset="0.56" stop-color="#3DF58A"/></linearGradient>
+          <radialGradient id="rnn-g" cx="0.18" cy="0.12" r="1.2"><stop offset="0" stop-color="#1B2126"/><stop offset="0.55" stop-color="#0D1013"/><stop offset="1" stop-color="#08090B"/></radialGradient>
+          <linearGradient id="rnn-sh" x1="0" y1="0" x2="1" y2="0"><stop offset="0.35" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.8"/><stop offset="0.65" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+          <mask id="rnn-ring"><rect width="188" height="96" rx="10" fill="#FFFFFF"/><rect x="6" y="6" width="176" height="84" rx="5" fill="#000000"/></mask>
         </defs>
-        <rect width="174" height="96" rx="10" fill="url(#fN)"/>
-        <g mask="url(#ringN)"><rect class="ar-sheen" x="-140" y="-20" width="140" height="136" fill="url(#shN)" transform="skewX(-18)"/></g>
-        <rect x="6" y="6" width="162" height="84" rx="5" fill="url(#gN)"/>
-        <g font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" dominant-baseline="central">
-          <text class="ar-in" x="16" y="49.5" fill="#B8FF3D">--</text>
-          <g clip-path="url(#typeN)"><text x="52" y="48" fill="#FFFFFF">runna</text></g>
-          <g class="ar-cur-in"><text class="ar-blink" x="142" y="48" fill="#6BA3FF">_</text></g>
+        <rect width="188" height="96" rx="10" fill="url(#rnn-f)"/>
+        <g mask="url(#rnn-ring)"><rect class="rn-sheen" x="-140" y="-20" width="140" height="136" fill="url(#rnn-sh)" transform="skewX(-18)"/></g>
+        <rect x="6" y="6" width="176" height="84" rx="5" fill="url(#rnn-g)"/>
+        <g fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+          <polyline class="rn-c" points="22,32 34,48 22,64" stroke="#FFD23D"/>
+          <polyline class="rn-c rn-c2" points="38,32 50,48 38,64" stroke="#9EE463"/>
+          <polyline class="rn-c rn-c3" points="54,32 66,48 54,64" stroke="#3DF58A"/>
         </g>
+        <text x="80" y="48" font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" dominant-baseline="central" fill="#FFFFFF">runna</text>
       </svg>
     </a>
     <ul class="nav-links">
@@ -533,12 +547,16 @@
 <section class="section reveal" id="quickstart">
   <div class="inner">
     <p class="section-label">// quick start</p>
-    <h2 class="section-title">One file.<br/>Then run it.</h2>
+    <h2 class="section-title">C# or F#.<br/>Then run it.</h2>
     <p class="section-sub">
-      A file-based app is enough: <code>build.cs</code> next to your solution, run with <code>dotnet run</code>
-      or straight from the shell. It requires .NET 11.
+      The same three targets either way: <code>test</code> needs <code>build</code>, which needs <code>clean</code>.
+      It requires .NET 11.
     </p>
-    <div class="code-panel">
+    <div class="lang-tabs" role="tablist">
+      <button class="lang-tab" role="tab" aria-selected="true" data-show="csharp" onclick="showLang(this)">C#</button>
+      <button class="lang-tab" role="tab" aria-selected="false" data-show="fsharp" onclick="showLang(this)">F#</button>
+    </div>
+    <div class="code-panel" data-lang="csharp">
       <div class="code-panel-head">build.cs</div>
 <pre><span class="c-kw">#!/usr/bin/env -S dotnet run --</span>
 <span class="c-kw">#:package</span> Nullean.Runna@0.1.0
@@ -568,6 +586,39 @@ app.<span class="c-key">Bind</span>(t =&gt; t.Value <span class="c-kw">switch</s
 
 <span class="c-kw">union</span> <span class="c-type">Target</span>(<span class="c-type">Clean</span>, <span class="c-type">Build</span>, <span class="c-type">Test</span>);</pre>
     </div>
+    <p class="section-sub lang-note" data-lang="csharp">
+      A file-based app is enough: <code>build.cs</code> next to your solution, run with <code>dotnet run build.cs</code>
+      or straight from the shell.
+    </p>
+    <div class="code-panel" data-lang="fsharp" hidden>
+      <div class="code-panel-head">build/Program.fs</div>
+<pre><span class="c-kw">open</span> <span class="c-ns">Nullean.Runna.Fs</span>
+<span class="c-kw">open</span> <span class="c-ns">Proc.Fs</span>
+
+<span class="c-kw">type</span> <span class="c-type">Target</span> =
+    <span class="c-com">/// Delete build output</span>
+    | <span class="c-type">Clean</span>
+    <span class="c-com">/// Build the solution</span>
+    | <span class="c-type">Build</span>
+    <span class="c-com">/// Build, then run the tests</span>
+    | <span class="c-type">Test</span>
+
+[&lt;<span class="c-type">EntryPoint</span>&gt;]
+<span class="c-kw">let</span> main argv =
+    <span class="c-kw">let</span> app = <span class="c-type">RunnaApp</span>&lt;<span class="c-type">Target</span>&gt;(<span class="c-str">"build"</span>, <span class="c-type">None</span>)
+
+    app.<span class="c-key">Bind</span> &lt;| <span class="c-kw">function</span>
+        | <span class="c-type">Clean</span> -&gt; <span class="c-key">target</span> [] { <span class="c-key">sh</span> <span class="c-str">$"dotnet clean"</span> }
+        | <span class="c-type">Build</span> -&gt; <span class="c-key">target</span> [<span class="c-type">Clean</span>] { <span class="c-key">sh</span> <span class="c-str">$"dotnet build"</span> }
+        | <span class="c-type">Test</span>  -&gt; <span class="c-key">target</span> [<span class="c-type">Build</span>] { <span class="c-key">sh</span> <span class="c-str">$"dotnet test"</span> }
+
+    app.<span class="c-key">RunAsync</span>(argv).<span class="c-key">GetAwaiter</span>().<span class="c-key">GetResult</span>()</pre>
+    </div>
+    <p class="section-sub lang-note" data-lang="fsharp" hidden>
+      F# targets live in a small project, say <code>build/build.fsproj</code> with
+      <code>GenerateDocumentationFile</code> on, run with <code>dotnet run --project build --</code>.
+      A case you forget in <code>Bind</code> is a compiler warning.
+    </p>
     <p class="section-sub">
       The package READMEs cover the full DSL:
       <a href="https://github.com/nullean/runna/blob/main/src/Nullean.Runna/README.md">Nullean.Runna</a> for C# and
@@ -620,6 +671,12 @@ app.<span class="c-key">Bind</span>(t =&gt; t.Value <span class="c-kw">switch</s
 </footer>
 
 <script>
+  function showLang(tab) {
+    var lang = tab.getAttribute('data-show');
+    document.querySelectorAll('.lang-tab').forEach(function(t) { t.setAttribute('aria-selected', t === tab ? 'true' : 'false'); });
+    document.querySelectorAll('[data-lang]').forEach(function(el) { el.hidden = el.getAttribute('data-lang') !== lang; });
+  }
+
   function copyPkg(btn) {
     var pkg = btn.getAttribute('data-pkg');
     var text = 'dotnet add package ' + pkg;

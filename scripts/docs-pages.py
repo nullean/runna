@@ -4,7 +4,7 @@
 
 - Links to the site root load it whole (hx-boost="false"). The root is the landing page, which has none of the docs
   shell, so htmx's boosted swap of #main-container would find nothing to swap and leave the reader on the docs.
-- The header shows the landing page's animated lockup (docs/images/runna-lockup-header.svg, which reads "--runna_") in
+- The header shows the landing page's animated lockup (docs/images/runna-lockup-header.svg, which reads "runna") in
   the slot the design-system header has for a logo (site-header__logo) and docs-builder never fills. It is inlined,
   not an <img>: an image cannot use the page's web fonts, and headless Chrome never advanced its animation. The theme
   hides the text title visually, since the lockup says it.
@@ -23,13 +23,13 @@ if not (docs / logo).is_file() or not logo.endswith(".svg"):
 svg = re.sub(r"<!--.*?-->\s*", "", (docs / logo).read_text(encoding="utf-8"), flags=re.S).strip()
 svg, n_open = re.subn(
     r'<svg\b[^>]*>',
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 174 96" width="87" height="48" class="site-header__logo"'
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188 96" width="94" height="48" class="site-header__logo"'
     ' aria-hidden="true" focusable="false">',
     svg,
     count=1,
 )
-if n_open != 1 or 'viewBox="0 0 174 96"' not in (docs / logo).read_text(encoding="utf-8"):
-    print(f"docs: {docs / logo} is not the 174x96 lockup this expects", file=sys.stderr)
+if n_open != 1 or 'viewBox="0 0 188 96"' not in (docs / logo).read_text(encoding="utf-8"):
+    print(f"docs: {docs / logo} is not the 188x96 lockup this expects", file=sys.stderr)
     sys.exit(1)
 logo_svg = re.sub(r">\s+<", "><", svg)
 
