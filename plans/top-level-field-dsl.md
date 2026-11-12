@@ -95,8 +95,8 @@ Schema += SchemaUpdate;
 Schema += SchemaValidate;
 
 // Late description (when += was used and chaining isn't possible):
-make[SchemaUpdate].Description("Regenerate schema/argh-cli-schema.json");
-make[SchemaValidate].Description("Fail if schema out of date");
+runna[SchemaUpdate].Description("Regenerate schema/argh-cli-schema.json");
+runna[SchemaValidate].Description("Fail if schema out of date");
 
 // ── Commands ───────────────────────────────────────────────────────────────
 Command Release = () => { };   // pure composer — no trailing body
@@ -147,10 +147,10 @@ record TestOptions([Argument] string? Filter = null);
 ### Late composition — indexer
 
 ```csharp
-make[SchemaUpdate].Description("…");
+runna[SchemaUpdate].Description("…");
 ```
 
-`make[delegate]` returns the `ITargetBuilder` for an already-registered node. Useful when `+=` was used and the chained `.Description(…)` call isn't available inline.
+`runna[delegate]` returns the `ITargetBuilder` for an already-registered node. Useful when `+=` was used and the chained `.Description(…)` call isn't available inline.
 
 ---
 
