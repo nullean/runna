@@ -11,8 +11,8 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\..\build\keys\keypair.snk</AssemblyOriginatorKeyFile>
 
-    <PackageId>Nullean.Runna</PackageId>
-    <Title>Nullean.Runna - typed namespaced build target DSL</Title>
+    <PackageId>Runna</PackageId>
+    <Title>Runna - typed namespaced build target DSL</Title>
     <Description>Property-dispatch build target DSL with Argh-quality help and per-target typed CLI arguments.</Description>
     <PackageTags>build;make;targets;build-automation;cli</PackageTags>
   </PropertyGroup>

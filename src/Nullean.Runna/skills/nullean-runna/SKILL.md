@@ -8,13 +8,13 @@ description: >-
 # Nullean.Runna
 
 A typed build target runner on top of Nullean.Argh: each target is a record, the records form a `union`, and `Bind`
-maps each case to what it runs. For F#, use `Nullean.Runna.Fs` (skill `nullean-runna-fs`).
+maps each case to what it runs. For F#, use the `Runna.Fs` package (skill `nullean-runna-fs`).
 
 ## The calls you need
 
 ```csharp
 #!/usr/bin/env -S dotnet run --
-#:package Nullean.Runna@0.1.0
+#:package Runna@0.2.0
 #:property GenerateDocumentationFile=true
 #:property NoWarn=CS1591
 using Nullean.Runna;

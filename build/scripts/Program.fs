@@ -43,8 +43,9 @@ let private projectsToClean () =
     ["src"; "tests"; "examples"]
     |> List.collect (fun d -> Directory.EnumerateFiles(d, "*.?sproj", SearchOption.AllDirectories) |> Seq.toList)
 
-/// Unified artifacts layout (<UseArtifactsOutput>): `.artifacts/bin/<Project>/release/`, every package being single-TFM
-let private assembliesDir (packageId: string) = $".artifacts/bin/{packageId}/release"
+/// Unified artifacts layout (<UseArtifactsOutput>): `.artifacts/bin/<Project>/release/`, every package being single-TFM.
+/// The packages are `Runna` and `Runna.Fs`; their projects keep the `Nullean.` prefix, as their namespaces do.
+let private assembliesDir (packageId: string) = $".artifacts/bin/Nullean.{packageId}/release"
 
 [<EntryPoint>]
 let main argv =
@@ -79,7 +80,7 @@ let main argv =
               for id, _ in packageIds () do
                   let report = Path.Combine(output, $"breaking-changes-{id}.md")
                   // quoted: an unquoted | would pipe
-                  sh $"dotnet assembly-differ diff 'previous-nuget|{id}|{version}|{Paths.MainTFM}' 'directory|{assembliesDir id}' -a --target {id} -f github-comment --output {report}" }
+                  sh $"dotnet assembly-differ diff 'previous-nuget|{id}|{version}|{Paths.MainTFM}' 'directory|{assembliesDir id}' -a --target Nullean.{id} -f github-comment --output {report}" }
         | Docs -> target [] {
               Documentation.build ()
               Documentation.serve 8080 }

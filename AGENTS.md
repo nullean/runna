@@ -1,6 +1,6 @@
 # runna
 
-Typed build targets for .NET: `Nullean.Runna` (C#, targets are the cases of a `union`) and `Nullean.Runna.Fs` (F#,
+Typed build targets for .NET: the `Runna` package (C#, targets are the cases of a `union`) and `Runna.Fs` (F#,
 targets are DU cases), built on [argh](https://github.com/nullean/argh) for help and argument parsing. The docs site
 (`docs/`, runna.nullean.net) is a docs-builder site published by `.github/workflows/gh-pages.yml`.
 
@@ -10,7 +10,7 @@ targets are DU cases), built on [argh](https://github.com/nullean/argh) for help
   class with `Target` properties), the dependency graph, the run plan, parallel stages, help, and the mise, make and
   just wrappers (`__wrappers sync|check`).
 - `src/Nullean.Runna.Generator`: the source generator that registers each union's case table. It ships inside the
-  `Nullean.Runna` package as an analyzer, so a `#:project` reference to `src/Nullean.Runna` does not run it; union
+  `Runna` package as an analyzer, so a `#:project` reference to `src/Nullean.Runna` does not run it; union
   targets need the package (or a project reference with `OutputItemType="Analyzer"`, as the tests use).
 - `src/Nullean.Runna.Fs`: the F# binding over the runtime. `Nullean.Runna` grants it `InternalsVisibleTo` by public key,
   so both are signed with `build/keys/keypair.snk`.

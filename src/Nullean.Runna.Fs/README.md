@@ -1,18 +1,18 @@
-# Nullean.Runna.Fs
+# Runna.Fs
 
 ![runna](https://raw.githubusercontent.com/nullean/runna/main/docs/images/png/runna-lockup-544x278.png)
 
 Typed, namespaced, exhaustive F# build targets. Your targets are DU cases, and a case you forget to handle in `Bind` is a compiler warning (FS0025). Target blocks are [Proc.Fs](https://www.nuget.org/packages/Proc.Fs) `shell { }` blocks, so commands are `sh $"…"` lines.
 
-[![NuGet](https://img.shields.io/nuget/v/Nullean.Runna.Fs?style=flat-square)](https://www.nuget.org/packages/Nullean.Runna.Fs)
+[![NuGet](https://img.shields.io/nuget/v/Runna.Fs?style=flat-square)](https://www.nuget.org/packages/Runna.Fs)
 
 ## Install
 
 ```sh
-dotnet add package Nullean.Runna.Fs
+dotnet add package Runna.Fs
 ```
 
-Requires .NET 11. The package pulls in `Nullean.Runna` (the underlying C# engine) and `Proc.Fs` transitively.
+Requires .NET 11. The package pulls in `Runna` (the underlying C# engine) and `Proc.Fs` transitively.
 
 ## Quick start
 
