@@ -13,7 +13,7 @@ maps each case to what it runs. For F#, use the `Runna.Fs` package (skill `nulle
 ## The calls you need
 
 ```csharp
-#!/usr/bin/env -S dotnet run --
+#!/usr/bin/env -S dotnet --
 #:package Runna@0.2.0
 #:property GenerateDocumentationFile=true
 #:property NoWarn=CS1591

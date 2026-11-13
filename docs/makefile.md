@@ -1,6 +1,6 @@
 # make
 
-`__wrappers sync` writes `.runna/runna.mk`, a GNU make include with one phony target per Make target. Include it from
+`__wrappers sync` writes `.runna/runna.mk`, a GNU make include with one phony target per runna target. Include it from
 the Makefile:
 
 ```makefile
