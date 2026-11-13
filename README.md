@@ -42,7 +42,7 @@ The same three targets in either language: `test` needs `build`, which needs `cl
 A file-based app next to your solution is enough.
 
 ```csharp
-#!/usr/bin/env -S dotnet run --
+#!/usr/bin/env -S dotnet --
 #:package Runna@0.2.0
 #:property GenerateDocumentationFile=true
 #:property NoWarn=CS1591

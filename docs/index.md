@@ -1,7 +1,7 @@
 # runna
 
-The `Runna` (C#) and `Runna.Fs` (F#) packages are typed build target DSLs built on [argh](https://argh.nullean.net). Targets are union cases
-(or DU cases in F#), dependencies run first, and every target gets Argh-style `--help`.
+The `Runna` (C#) and `Runna.Fs` (F#) packages are typed build target DSLs built on [argh](https://argh.nullean.net).
+Targets are union cases (or DU cases in F#), dependencies run first, and every target gets Argh-style `--help`.
 
 ```bash
 ./build.cs --help
@@ -11,6 +11,8 @@ The `Runna` (C#) and `Runna.Fs` (F#) packages are typed build target DSLs built 
 ./build.cs lint test pack    # several targets, in order, shared dependencies once
 ./build.cs release --skip docs
 ```
+
+[**Getting started**](getting-started.md) - Install, and a first build in C# and in F#.
 
 [**Choosing what runs**](running.md) - Several targets on one command line, `-s` and `--skip`.
 

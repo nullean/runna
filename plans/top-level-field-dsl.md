@@ -44,7 +44,7 @@ Two C# language features do all the work:
 ## Worked example
 
 ```csharp
-#!/usr/bin/env dotnet run
+#!/usr/bin/env -S dotnet --
 #:package Runna@0.2.0
 
 using Nullean.Runna;

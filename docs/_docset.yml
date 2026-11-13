@@ -6,6 +6,7 @@ branding:
 
 toc:
   - file: index.md
+  - file: getting-started.md
   - file: running.md
   - file: graph.md
   - file: parallel.md

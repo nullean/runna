@@ -17,7 +17,7 @@ Or, in a file-based app such as `build.cs`, `#:package Runna@<version>` as below
 ## Quick start
 
 ```csharp
-#!/usr/bin/env -S dotnet run --
+#!/usr/bin/env -S dotnet --
 #:package Runna@0.2.0
 #:property GenerateDocumentationFile=true
 #:property NoWarn=CS1591
