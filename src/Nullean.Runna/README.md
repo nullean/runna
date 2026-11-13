@@ -1,24 +1,24 @@
-# Nullean.Runna
+# Runna
 
 ![runna](https://raw.githubusercontent.com/nullean/runna/main/docs/images/png/runna-lockup-544x278.png)
 
 Typed build targets for .NET, with [Argh](https://github.com/nullean/argh)-quality help. Your targets are the cases of a C# `union`; each one runs commands, and dependencies run first.
 
-[![NuGet](https://img.shields.io/nuget/v/Nullean.Runna?style=flat-square)](https://www.nuget.org/packages/Nullean.Runna)
+[![NuGet](https://img.shields.io/nuget/v/Runna?style=flat-square)](https://www.nuget.org/packages/Runna)
 
 ## Install
 
 ```sh
-dotnet add package Nullean.Runna
+dotnet add package Runna
 ```
 
-Or, in a file-based app such as `build.cs`, `#:package Nullean.Runna@<version>` as below. It requires .NET 11.
+Or, in a file-based app such as `build.cs`, `#:package Runna@<version>` as below. It requires .NET 11.
 
 ## Quick start
 
 ```csharp
 #!/usr/bin/env -S dotnet run --
-#:package Nullean.Runna@0.1.0
+#:package Runna@0.2.0
 #:property GenerateDocumentationFile=true
 #:property NoWarn=CS1591
 using Nullean.Runna;
@@ -219,7 +219,7 @@ and [just](https://runna.nullean.net/just).
 
 `RunnaApp.Execute<TBuild>(args)` discovers targets from a `RunnaBuild` class instead: `Target` properties, `[Flag]` and `[GlobalOption]` properties, and nested `Namespace` classes. A dependency on a `Target<T>` names its value with `With`: `.DependsOn(Test.With(new("Unit")))`. [`build.cs`](https://github.com/nullean/argh/blob/main/build.cs) in this repository is a complete example.
 
-For F#, see [`Nullean.Runna.Fs`](https://www.nuget.org/packages/Nullean.Runna.Fs).
+For F#, see [`Runna.Fs`](https://www.nuget.org/packages/Runna.Fs).
 
 ## Learn more
 

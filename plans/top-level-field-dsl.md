@@ -45,7 +45,7 @@ Two C# language features do all the work:
 
 ```csharp
 #!/usr/bin/env dotnet run
-#:package Nullean.Runna@0.1.0
+#:package Runna@0.2.0
 
 using Nullean.Runna;
 using static ProcNet.Proc;

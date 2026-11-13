@@ -1,6 +1,6 @@
 # runna
 
-`Nullean.Runna` (C#) and `Nullean.Runna.Fs` (F#) are typed build target DSLs built on [argh](https://argh.nullean.net). Targets are union cases
+The `Runna` (C#) and `Runna.Fs` (F#) packages are typed build target DSLs built on [argh](https://argh.nullean.net). Targets are union cases
 (or DU cases in F#), dependencies run first, and every target gets Argh-style `--help`.
 
 ```bash
@@ -27,7 +27,7 @@ variables and tools before the run starts.
 
 The package READMEs cover the target DSLs:
 
-- [`Nullean.Runna`](https://github.com/nullean/runna/blob/main/src/Nullean.Runna/README.md): C# targets as `union` cases,
+- [`Runna`](https://github.com/nullean/runna/blob/main/src/Nullean.Runna/README.md): C# targets as `union` cases,
   or properties on a `RunnaBuild` class.
-- [`Nullean.Runna.Fs`](https://github.com/nullean/runna/blob/main/src/Nullean.Runna.Fs/README.md): F# targets as DU
+- [`Runna.Fs`](https://github.com/nullean/runna/blob/main/src/Nullean.Runna.Fs/README.md): F# targets as DU
   cases, with `shell { }` target blocks.
