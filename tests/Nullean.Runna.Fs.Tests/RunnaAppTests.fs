@@ -7,7 +7,8 @@ open Nullean.Runna.Fs
 
 type Level = Low = 0 | High = 1
 
-type SchemaTarget = Update | Validate
+type StatusOptions = { Json: bool }
+type SchemaTarget = Update | Validate | Status of StatusOptions
 type PkgTarget    = Generate | Validate
 
 type TestOptions = { Filter: string option; Retries: int option }
@@ -52,6 +53,7 @@ let private standard (app: RunnaApp<Target>) (log: ResizeArray<string>) =
                          log.Add $"test:%A{o.Filter}:%A{o.Retries}"
         | Schema Update                -> Runna.target [] "Regenerate the schema" <| fun _ -> log.Add "schema-update"
         | Schema SchemaTarget.Validate -> Runna.target [] "Check the schema" <| fun _ -> log.Add "schema-validate"
+        | Schema (Status o)            -> Runna.target [] "Schema status" <| fun _ -> log.Add $"schema-status:json={o.Json}"
         | Pkg Generate                 -> Runna.target [] "" <| fun _ -> log.Add "pkg-generate"
         | Pkg PkgTarget.Validate       -> Runna.target [] "" <| fun _ -> log.Add "pkg-validate"
         | Release -> Runna.command [Test { Filter = None; Retries = None }] [Pkg Generate; Pkg PkgTarget.Validate]
@@ -94,6 +96,15 @@ type RunnaAppTests() =
         Assert.Equal<string list>(["pkg-validate"], r.Log)
         let r2 = runApp standard ["schema"; "validate"]
         Assert.Equal<string list>(["schema-validate"], r2.Log)
+
+    [<Test>]
+    member _.``Namespaced case with a record payload binds its flags``() =
+        let r = runApp standard ["schema"; "status"; "--json"]
+        okExit r
+        Assert.Equal<string list>(["schema-status:json=True"], r.Log)
+        let r2 = runApp standard ["schema"; "status"]
+        okExit r2
+        Assert.Equal<string list>(["schema-status:json=False"], r2.Log)
 
     [<Test>]
     member _.``Command runs requires then composes``() =
