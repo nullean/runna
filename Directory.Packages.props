@@ -6,7 +6,7 @@
   <ItemGroup>
     <PackageVersion Include="MinVer" Version="8.0.0" />
     <!-- the CLI runtime runna renders help with: help formatting, fuzzy matching, [Argument] -->
-    <PackageVersion Include="Nullean.Argh.Core" Version="0.30.1" />
+    <PackageVersion Include="Nullean.Argh.Core" Version="0.30.3" />
     <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="5.12.0" />
     <PackageVersion Include="Microsoft.CodeAnalysis.Analyzers" Version="5.12.0" />
     <PackageVersion Include="Proc" Version="0.22.1" />
