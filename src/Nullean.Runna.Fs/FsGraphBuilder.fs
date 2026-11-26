@@ -41,11 +41,13 @@ let private isStructuralNs (ci: UnionCaseInfo) =
     fs.Length = 1 && FSharpType.IsUnion(fs.[0].PropertyType)
 
 /// The payload record of a case value, or null when the case carries none. A namespace sub-case carries no payload.
-let private payloadOf (value: obj) : obj =
+let rec private payloadOf (value: obj) : obj =
     if isNull value then null
     else
         let ci, fields = FSharpValue.GetUnionFields(value, value.GetType())
-        if fields.Length = 1 && FSharpType.IsRecord(ci.GetFields().[0].PropertyType) then fields.[0] else null
+        if fields.Length = 1 && FSharpType.IsRecord(ci.GetFields().[0].PropertyType) then fields.[0]
+        elif isStructuralNs ci then payloadOf fields.[0] // a namespaced case: the payload is on the sub-case
+        else null
 
 /// The targets of an F# RunnaApp: a node's value is the DU case value. `bind` runs again for each value, so a dependency
 /// declared as `Test { Filter = Some "Unit" }` runs the body bind returns for that value.
@@ -64,7 +66,11 @@ type private FsTargetSource<'TCase when 'TCase : comparison and 'TCase : not nul
             let defaultValue, caseInfo = nodeCases.[node]
             let fields = caseInfo.GetFields()
             if fields.Length = 1 && FSharpType.IsRecord(fields.[0].PropertyType) then
-                FSharpValue.MakeUnion(caseInfo, [| FsDtoBinder.bind fields.[0].PropertyType args |])
+                let bound = FSharpValue.MakeUnion(caseInfo, [| FsDtoBinder.bind fields.[0].PropertyType args |])
+                // A namespaced case's node holds the sub-case; wrap it back into the root case it came from.
+                let outer, _ = FSharpValue.GetUnionFields(box defaultValue, typeof<'TCase>)
+                if outer.Name = caseInfo.Name && outer.DeclaringType = caseInfo.DeclaringType then bound
+                else FSharpValue.MakeUnion(outer, [| bound |])
             else box defaultValue
 
         member _.Describe(node, value) =
